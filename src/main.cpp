@@ -1,11 +1,14 @@
 #include <iostream>
 #include "core/Widget.hpp"
 #include "core/Label.hpp"
+#include "renderer/Cell.hpp"
 
 int main(){
-    Label lbl("Hello, TUI");
-    lbl.setPosition(5,3);
-    lbl.draw();
-    std::cout<<"\n";
-    return 0;    
+    Cell a;
+    Cell b;
+
+    std::cout << (a == b ? "equal" : "not equal") << "\n";
+
+    b.ch = 'X';
+    std::cout << (a == b ? "equal" : "not equal") << "\n";
 }
