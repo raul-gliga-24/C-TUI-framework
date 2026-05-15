@@ -4,5 +4,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(tui_framework 
     src/main.cpp
-    src/core/Label.cpp)
+    src/core/Label.cpp
+    src/renderer/Buffer.hpp
+    src/renderer/Buffer.cpp)
 target_include_directories(tui_framework PRIVATE src)
