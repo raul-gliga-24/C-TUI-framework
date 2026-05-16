@@ -6,5 +6,6 @@ add_executable(tui_framework
     src/main.cpp
     src/core/Label.cpp
     src/renderer/Buffer.hpp
-    src/renderer/Buffer.cpp)
+    src/renderer/Buffer.cpp
+    src/renderer/Renderer.cpp)
 target_include_directories(tui_framework PRIVATE src)
