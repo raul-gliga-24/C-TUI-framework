@@ -1,9 +1,10 @@
 #pragma once
+#include "../renderer/Buffer.hpp"
 class Widget{
 public:
     virtual ~Widget() = default;
 
-    virtual void draw() = 0;
+    virtual void draw(Buffer& buf) = 0;
     virtual bool handleInput(char c) = 0;
     virtual bool isFocusable() const = 0;
 
