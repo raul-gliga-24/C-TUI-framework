@@ -1,12 +1,13 @@
 #pragma once
 #include "Widget.hpp"
 #include <string>
+#include "../renderer/Buffer.hpp"
 
 class Label : public Widget{
 public:
     explicit Label(std::string text);
 
-    void draw() override;
+    void draw(Buffer& buf) override;
     bool handleInput(char c) override {return false;}
     bool isFocusable() const override {return false;}
 

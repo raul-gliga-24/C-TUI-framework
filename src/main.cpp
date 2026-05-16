@@ -25,14 +25,12 @@ int main(){
   └──────────────────────┴────────────────┘
   */
     Renderer r(80, 24);
-    r.backBuffer().at(5, 3).ch = 'H';
-    r.backBuffer().at(5, 3).fg = 11;
-    r.backBuffer().at(6, 3).ch = 'i';
 
-    std::cin.get();
+  Label lbl("Hello!");
+  lbl.setPosition(2, 2);
+  lbl.draw(r.backBuffer());
 
-
-    r.present();
-    std::cin.get();
+  r.present();
+  std::cin.get();
 
  }
