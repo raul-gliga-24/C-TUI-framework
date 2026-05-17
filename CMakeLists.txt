@@ -8,5 +8,7 @@ add_executable(tui_framework
     src/renderer/Buffer.hpp
     src/renderer/Buffer.cpp
     src/renderer/Renderer.cpp
-    src/hal/Terminal.cpp)
+    src/hal/Terminal.cpp
+    src/hal/InputReader.cpp
+    src/composite/Panel.cpp)
 target_include_directories(tui_framework PRIVATE src)
