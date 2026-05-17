@@ -12,13 +12,13 @@
 
 int main() {
     Panel p;
-    p.setPosition(0,0);
+    p.setPosition(5,3);
     p.setSize(80,24);
 
      auto l1 = std::make_unique<Label>("Hello");
-     l1->setPosition(2,2);
+     l1->setPosition(1,1);
     auto l2 = std::make_unique<Label>("World");
-    l2->setPosition(4,4);
+    l2->setPosition(2,2);
     p.addChildren(std::move(l1));
     p.addChildren(std::move(l2));
 
