@@ -13,9 +13,9 @@
 int main() {
     Panel p;
     p.setPosition(5,3);
-    p.setSize(80,24);
+    p.setSize(10,10);
 
-     auto l1 = std::make_unique<Label>("Hello");
+     auto l1 = std::make_unique<Label>("Hello World Long ");
      l1->setPosition(1,1);
     auto l2 = std::make_unique<Label>("World");
     l2->setPosition(2,2);
