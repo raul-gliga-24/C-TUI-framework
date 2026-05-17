@@ -5,11 +5,32 @@
 #include "renderer/Buffer.hpp"
 #include "renderer/Renderer.hpp"
 #include "hal/Terminal.hpp"
+#include "hal/InputReader.hpp"
+#include "composite/Panel.hpp"
+#include <string>
+#include <vector>
 
 int main() {
-      {
-          Terminal term;
-          std::cout << "\033[5;10HTerminal hijacked!" << std::flush;
-          Sleep(2000);
-      } 
+    Panel p;
+    p.setPosition(5,3);
+    p.setSize(10,10);
+
+     auto l1 = std::make_unique<Label>("Hello World Long ");
+     l1->setPosition(1,1);
+    auto l2 = std::make_unique<Label>("World");
+    l2->setPosition(2,2);
+    p.addChildren(std::move(l1));
+    p.addChildren(std::move(l2));
+
+    Terminal term;
+    Renderer renderer(Terminal::width(), Terminal::height());
+
+    p.draw(renderer.backBuffer());
+    renderer.present(); 
+
+  std::cin.get();
+
+
+
+
   }

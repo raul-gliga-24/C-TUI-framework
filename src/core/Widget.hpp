@@ -16,6 +16,10 @@ public:
         this->w_ = w;
         this->h_ = h;
     }
+    int getX(){return x_;}
+    int getY(){return y_;}
+    int getH(){return h_;}
+    int getW(){return w_;}
 
 protected:
     int x_ = 0, y_ = 0 , w_ = 0 , h_ =0;
