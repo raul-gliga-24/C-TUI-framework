@@ -12,6 +12,7 @@ class EventLoop{
         void setRoot(std::unique_ptr<Panel>root);
         void run();
         void quit();
+        void setFocus(Widget* w);
 
     private:
         Terminal terminal_;
@@ -19,4 +20,5 @@ class EventLoop{
         Renderer renderer_;
         std::unique_ptr<Panel> root_;
         bool quit_ = false;
+        Widget* focused_ = nullptr;
 };

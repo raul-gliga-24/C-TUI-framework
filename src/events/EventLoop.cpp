@@ -43,11 +43,27 @@ void EventLoop::run(){
             std::this_thread::sleep_for(remaining);
         }
 
-        if ( key == '\x1b'){
-            quit();
+        if (key.has_value()){
+            char c = *key;
+            if (c == 'x1b'){
+                quit();
+            }
+            else if(focused_){
+                focused_->handleInput(c);
+            }
         }
 
     }
+
+
+}
+
+void EventLoop::setFocus(Widget* w){
+      if (focused_) focused_->blur();
+      focused_ = w;                    
+      if (focused_) focused_->focus(); 
+  
+
 
 
 }

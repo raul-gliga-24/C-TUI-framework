@@ -20,6 +20,8 @@ public:
     int getY(){return y_;}
     int getH(){return h_;}
     int getW(){return w_;}
+    virtual void focus(){}
+    virtual void blur(){}
 
 protected:
     int x_ = 0, y_ = 0 , w_ = 0 , h_ =0;
