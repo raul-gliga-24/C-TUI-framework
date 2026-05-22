@@ -45,7 +45,7 @@ void EventLoop::run(){
 
         if (key.has_value()){
             char c = *key;
-            if (c == 'x1b'){
+            if (c == '\x1b'){
                 quit();
             }
             else if(focused_){

@@ -11,5 +11,7 @@ add_executable(tui_framework
     src/hal/Terminal.cpp
     src/hal/InputReader.cpp
     src/composite/Panel.cpp
-    src/events/EventLoop.cpp)
+    src/events/EventLoop.cpp
+    src/widgets/Button.hpp
+    src/widgets/Button.cpp)
 target_include_directories(tui_framework PRIVATE src)
